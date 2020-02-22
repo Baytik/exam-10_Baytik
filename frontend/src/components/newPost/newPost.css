@@ -1,0 +1,34 @@
+.newPost {
+    margin-top: 10px;
+    background: orange;
+    padding: 10px;
+}
+.block {
+    margin: 30px 0;
+}
+.block input {
+    margin-left: 20%;
+    font-size: 18px;
+    width: 300px;
+    padding: 5px;
+    border: 2px dashed;
+}
+.block .input-3 {
+    margin-left: 19%;
+    color: orange;
+    background: #fff;
+}
+.block .input-2 {
+    margin-left: 15%;
+    padding-bottom: 100px;
+}
+.block button {
+    margin-left: 35%;
+    background: transparent;
+    border-bottom: 3px dashed red;
+    border-top: 2px dashed red;
+    border-left: none;
+    border-right: none;
+    font-size: 25px;
+    cursor: pointer;
+}
