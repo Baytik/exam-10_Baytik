@@ -1,0 +1,21 @@
+.onePost-block {
+    border: 10px dashed green;
+    margin-top: 20px;
+    background: orange;
+    margin-bottom: 30px;
+}
+.onePost-block h3 {
+    font-size: 30px;
+    margin-left: 30px;
+}
+.onePost-block p {
+    color: gray;
+    font-size: 18px;
+    margin-left: 30px;
+}
+.onePost-block h4 {
+    margin-left: 30px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.5;
+}
