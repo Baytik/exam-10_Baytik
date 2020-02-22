@@ -18,6 +18,23 @@ class OnePost extends Component {
                 <p>{this.props.post.datetime}</p>
                 <h4>{this.props.post.description}</h4>
                 </div>
+                <div className="comments">
+                    h
+                </div>
+                <div className="add-comment">
+                    <h5>Add Comment</h5>
+                    <div>
+                        <span>Name</span>
+                        <input type="text" name="name"/>
+                    </div>
+                    <div>
+                        <span>Comment</span>
+                        <input type="text" name="comment"/>
+                    </div>
+                    <div>
+                        <button>Add</button>
+                    </div>
+                </div>
             </div>
         );
     }

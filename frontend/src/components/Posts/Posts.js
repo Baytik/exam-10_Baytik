@@ -4,11 +4,12 @@ import './Posts.css';
 import {fetchPosts, postRemove} from "../../store/actions/actions";
 import {connect} from "react-redux";
 import nanoid from 'nanoid';
+import imageNot from './image_not.png';
 
 class Posts extends Component {
 
-    async componentDidMount() {
-        await this.props.fetchPosts();
+    componentDidMount() {
+        this.props.fetchPosts();
     }
 
     postDelete = async (id) => {
@@ -25,9 +26,10 @@ class Posts extends Component {
                 <div className="posts-block">
                     {Object.keys(this.props.posts).map(post => (
                         <div className="post" key={nanoid()}>
-                            <div>
-                            </div>
                             <div className="post-block">
+                                <div>
+                                    <img src={imageNot} alt=""/>
+                                </div>
                                 <div>
                                 <p className="title">{this.props.posts[post].title}</p>
                                 <p className="datetime">{this.props.posts[post].datetime}</p>
