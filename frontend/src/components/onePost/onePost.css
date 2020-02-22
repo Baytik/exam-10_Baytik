@@ -19,3 +19,51 @@
     font-size: 24px;
     line-height: 1.5;
 }
+.add-comment {
+    margin-bottom: 50px;
+    background: orange;
+    padding: 20px 20px;
+    border: 5px dashed blue;
+}
+.add-comment h5 {
+    margin-top: 20px;
+    font-size: 23px;
+}
+.add-comment input {
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 15%;
+}
+.add-comment div {
+    margin: 20px 0;
+}
+.add-comment .comment {
+    margin-left: 12%;
+}
+.add-comment button {
+    font-size: 20px;
+    margin-left: 27%;
+    background: white;
+    border: 2px dashed white;
+    cursor: pointer;
+    padding: 3px 10px;
+}
+.comments {
+    margin: 40px 0;
+    background: orange;
+    padding: 10px;
+    border: 5px dashed red;
+}
+.comments p {
+    margin-top: 20px;
+    font-size: 30px;
+}
+.comment-type {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.comment-type span {
+    font-size: 20px;
+    margin-right: 20px;
+}

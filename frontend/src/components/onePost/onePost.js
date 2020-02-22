@@ -2,13 +2,34 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {getOnePost} from "../../store/actions/actions";
 import './onePost.css';
+import axios from 'axios';
 
 class OnePost extends Component {
 
-    componentDidMount() {
+    state = {
+      name: '',
+      comment: '',
+      comments: []
+    };
+
+    changeInputHandler = e => {
+        this.setState({[e.target.name]: e.target.value})
+    };
+
+    async componentDidMount() {
         const id = this.props.match.params.id;
-        this.props.getOnePost(id)
+        this.props.getOnePost(id);
+        const response = await axios.get('https://products-69.firebaseio.com/.json');
+        this.setState({comments: response.data})
     }
+
+    addComment = async () => {
+      const newComment = {
+        name: this.state.name,
+        comment: this.state.comment
+      };
+      await axios.post('https://products-69.firebaseio.com/.json', newComment)
+    };
 
     render() {
         return (
@@ -19,20 +40,26 @@ class OnePost extends Component {
                 <h4>{this.props.post.description}</h4>
                 </div>
                 <div className="comments">
-                    h
+                    <p>Comments</p>
+                    {Object.keys(this.state.comments).map((comment) => (
+                        <div className="comment-type" key={comment}>
+                            <span>{this.state.comments[comment].name}:</span>
+                            <span>{this.state.comments[comment].comment}</span>
+                        </div>
+                    ))}
                 </div>
                 <div className="add-comment">
                     <h5>Add Comment</h5>
                     <div>
                         <span>Name</span>
-                        <input type="text" name="name"/>
+                        <input type="text" name="name" onChange={this.changeInputHandler}/>
                     </div>
                     <div>
                         <span>Comment</span>
-                        <input type="text" name="comment"/>
+                        <input type="text" name="comment" className="comment" onChange={this.changeInputHandler}/>
                     </div>
                     <div>
-                        <button>Add</button>
+                        <button onClick={this.addComment}>Add</button>
                     </div>
                 </div>
             </div>
