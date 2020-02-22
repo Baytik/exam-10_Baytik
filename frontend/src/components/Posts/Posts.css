@@ -1,0 +1,53 @@
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.header-block h1 {
+    margin: 0;
+    font-weight: normal;
+}
+.header-block a {
+    background: white;
+    border: 2px solid black;
+    text-decoration: none;
+    padding: 5px 7px;
+    color: black;
+    font-size: 18px;
+}
+.header-block a:hover {
+    background: yellow;
+}
+.posts-block {
+    margin-top: 30px;
+    border: 3px solid black;
+    height: 500px;
+    overflow: scroll;
+    background: orange;
+}
+.post {
+    border: 2px solid black;
+    margin: 10px 15px;
+}
+.post-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.post-block p {
+    margin: 0;
+}
+.title {
+    font-size: 25px;
+}
+.datetime {
+    color: gray;
+}
+.post-block button {
+    background: white;
+    border: 2px dashed black;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
